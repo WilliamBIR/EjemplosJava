@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            const numeros=[3,4,7,2,5];
+            const numerosMas10=numeros.map(function(val){
+               return val+10 ;
+            });
+            console.log(numerosMas10);
+            const numerosElevados=[1,4,9,25,36];
+            const raices=numerosElevados.map(function(val){
+                return Math.sqrt(val);
+            });
+            console.log(raices);
+            const matriz=[[1,2,3],[5,6],[2,4,6,8]];
+            const numerosElementos=matriz.map(function(a){
+                return a.length;
+            });
+            console.log(numerosElementos);
+        </script>
+    </body>
+</html>

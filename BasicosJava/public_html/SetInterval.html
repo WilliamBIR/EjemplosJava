@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <img id="slider" width="1120" height="630" />
+        <script>
+            window.addEventListener('load',function(){
+                console.log("documento cargado");
+                const slider=document.getElementById("slider");
+                const imagenes=["Ougi3.png","logopoli.png","logoupiita.png"];
+                let indeximagenes=0;
+                const cambiarImagenes=function(){
+                    slider.src=`img/${imagenes[indeximagenes]}`;
+                    if(indeximagenes<imagenes.length-1){
+                        indeximagenes++;
+                    }else{
+                        indeximagenes=0;
+                    }
+                };
+                cambiarImagenes();
+                setInterval(cambiarImagenes,2000);
+            });
+            /*
+            const intervalo=function(){
+                console.log("TGMaelstrom");
+            };
+            setInterval(intervalo,2000);
+        
+             */
+        </script>
+    </body>
+</html>

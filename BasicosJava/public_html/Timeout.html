@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            const conteo=function(milisegundos){
+                setTimeout(function(){
+                    //console.log("Hola Mundo")
+                    let segundos=milisegundos/1000;
+                    console.log(`Tiempo transcurrido: ${segundos} segundos`);
+                },milisegundos);//en milisegundos
+            }
+            conteo(3000);
+            conteo(2000);
+            conteo(5000);
+        </script>
+    </body>
+</html>

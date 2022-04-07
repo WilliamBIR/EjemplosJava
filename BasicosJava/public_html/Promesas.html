@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            /*
+            let promesa=new Promise((resolve,reject)=>{
+                resolve('exito en el procesamiento');
+                reject('Error en la peticion');
+            });
+            
+            promesa.then((resultado)=>{
+               console.log(resultado); 
+            }).catch((error)=>{
+                console.log(error);
+            }).finally{
+                console.log("el procesamiento ha terminado");
+            };
+     *       */
+                const contar=(palabra)=>{
+                    return new Promise((res,rej)=>{
+                       setTimeout(()=>{
+                           let nLetras = String(palabra).length;
+                           if(nLetras<20){
+                               let data={
+                                   respuesta:'Ok'
+                               };
+                               res(JSON.stringify(data));
+                           }
+                           else{
+                               rej('Error');
+                           }
+                       },2000); 
+                    });
+                };
+                
+                let respuesta=contar('programacion');
+                respuesta.then((res)=>{
+                    return res;
+                }).then((res)=>{
+                    console.log(JSON.parse(res));
+                }).catch((error)=>{
+                    console.log(error);
+                }).finally(()=>{
+                    console.log('Todo ha terminado');
+                });
+                
+        </script>
+    </body>
+</html>

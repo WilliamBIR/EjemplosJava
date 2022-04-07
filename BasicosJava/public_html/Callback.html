@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <button id="btnSumar">Sumar</button>
+        <script>
+            const sumar=(n1,n2,callback)=>{
+                return callback(n1+n2);
+            };
+            document.getElementById('btnSumar').addEventListener('click',()=>{
+                let num1=parseInt(document.getElementById('num1').value);
+                let num2=parseInt(document.getElementById('num2').value);
+                sumar(num1,num2,(res)=>{
+                   console.log(`La suma es: ${res}`);
+                });
+                
+            });
+            //Ejemplo 1:
+            
+            
+            /*const fun1=(callback)=>{
+                console.log('Inicio');
+                callback();
+                console.log('fin');
+            };
+            const fun2=()=>{
+                console.log("proceso intermedio");
+            };
+            fun1(fun2);
+              */
+            
+            //Ejemplo 2: 
+            /*
+            window.addEventListener('load',()=>{
+                const titulo=document.getElementById('titulo');
+                titulo.innerHTML="Prueba Maelstra";  
+             });
+             */
+            
+            
+        </script>
+        <!--h1 id="titulo">Texto</h1> Ejemplo 2
+    </body>
+</html>
